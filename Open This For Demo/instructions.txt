@@ -1,0 +1,7 @@
+1). Run the index.html to directly see how the dashboard will look like.
+2). The Dashboard Folder contains the solution file for asp.net mvc project for the same dashboard.
+The business logic hasn't been implemented yet. However the UI has been designed just the way it was
+asked in the mockup file. Which can be viewed by running the index.html file.
+3). To run the project from Visual Studio, load the solution file in Visual Studio and navigate to Dashboard.cshtml file and press Ctrl+F5
+This will make sure that the URL being hit is http://localhost:63739/UserProfiles/Dashboard
+4). Open with chrome or any browser. Making sure the URL is something like this http://localhost:63739/UserProfiles/Dashboard

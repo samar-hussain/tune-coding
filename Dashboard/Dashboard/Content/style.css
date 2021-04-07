@@ -1,0 +1,186 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.team_container {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+}
+
+.text {
+    color: #097e8dfa;
+    font-size: 25px;
+    margin-top: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.row {
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: #fdfdfd;
+    width: 330px;
+    height: 220px;
+    margin: 20px 10px 10px 10px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 2px 1px rgb(197, 196, 196);
+}
+
+.canvasjs-chart-tooltip {
+    margin-bottom: 40px;
+}
+
+.profile-card:hover {
+    box-shadow: 2px 2px 15px 1px rgb(197, 196, 196);
+}
+
+.profile-content {
+    padding: 10px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    float: left;
+}
+
+[firstname-initial]:before {
+    content: attr(firstname-initial);
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(190, 190, 190);
+    vertical-align: middle;
+    margin-right: 1em;
+    color: white;
+    float: left;
+}
+
+.profile-image {
+    text-align: left;
+}
+
+.profile-intro {
+    margin-left: 18px;
+    padding-left: 18px;
+}
+
+.person-name {
+    float: left;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.designation {
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.graph-container {
+    width: 70%;
+    height: 70px;
+    margin-top: 10px;
+    float: left;
+}
+
+.right-pane {
+    width: auto;
+    height: 150px;
+    float: right;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 13px;
+}
+
+    .right-pane th {
+        color: rgb(155, 155, 155);
+        font-weight: normal;
+        text-align: right;
+    }
+
+    .right-pane td {
+        font-weight: normal;
+    }
+
+.footer {
+    width: 70%;
+    height: 80px;
+    float: left;
+    font-size: 13px;
+}
+
+    .footer p {
+        margin-top: 50px;
+        font-size: 12px;
+    }
+
+.btn {
+    background-color: rgb(217, 28, 241);
+    color: #ffffff;
+    width: 150px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 3px 3px 3px 3px #e6e6e6;
+    border-radius: 3px;
+    outline: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+}
+
+.searchContainer {
+    display: inline-flex;
+    flex: 1 1 300px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    float:right
+}
+
+.navbar-inverse {
+    background-color: midnightblue;
+}
+.container
+{
+    border-bottom:20px;
+}
+
+.searchIcon {
+    padding: 0.5rem;
+}
+
+.searchBox {
+    border: 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    flex: 1;
+}
+
+.searchButton {
+    background: #538AC5;
+    border: 0;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0;
+}

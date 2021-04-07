@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript">
+        window.onload = function ()
+        {
+            var i;
+            for (i = 0; i < 10; i++)
+            {
+                var chart = new CanvasJS.Chart("chartContainer"+i,
+                {
+                    toolTip:
+                    {
+                        fontColor:"rgb(14, 140, 212)",
+                        cornerRadius: 5,
+                        shared: true,
+                        backgroundColor: "rgba(255,255,255,0.9)",
+                        animationEnabled:true,
+                        contentFormatter: function (e) {
+                        var content = " ";
+                        for (var i = 0; i < e.entries.length; i++) {
+                            content += e.entries[i].dataPoint.y + " " + e.entries[i].dataSeries.name;
+                            content += " on <br/>"+e.entries[i].dataPoint.x;
+                        }
+                        return content;
+                    }
+                    },
+                    axisX:{
+                    gridThickness: 0,
+                    tickLength: 0,
+                    lineThickness: 0,
+                    labelFormatter: function(){
+                    return "";
+                    }
+                    },
+                    axisY:{
+                    gridThickness: 0,
+                    tickLength: 0,
+                    lineThickness: 0,
+                    labelFormatter: function(){
+                    return "";
+                        }
+                    },
+                    backgroundcolor: "#fdfdfd",
+                    data: [
+                    {
+                        markerType: "circle",
+                        markerColor: "white",
+                        markerBorderColor : "hazel",
+                        markerSize: 5,
+                        markerBorderThickness: 1,
+                        type: "line",
+                        name: "Conversions",
+                        showInLegend: false,
+                        lineThickness:1,
+                    dataPoints: [
+                        { x: new Date(2012, 00, 1), y: 400 },
+                        { x: new Date(2012, 01, 1), y: 714 },
+                        { x: new Date(2012, 02, 1), y: 620 },
+                        { x: new Date(2012, 03, 1), y: 550 },
+                        { x: new Date(2012, 04, 1), y: 650 },
+                        { x: new Date(2012, 05, 1), y: 500 },
+                        { x: new Date(2012, 06, 1), y: 420 },
+                        { x: new Date(2012, 07, 1), y: 630 },
+                        { x: new Date(2012, 08, 1), y: 510 },
+                        { x: new Date(2012, 09, 1), y: 300 },
+                        { x: new Date(2012, 10, 1), y: 480 },
+                        { x: new Date(2012, 11, 1), y: 540 },
+                        { x: new Date(2012, 12, 1), y: 510 },
+                        { x: new Date(2012, 13, 1), y: 620 },
+                        { x: new Date(2012, 14, 1), y: 436 },
+                        { x: new Date(2012, 15, 1), y: 500 },
+                        { x: new Date(2012, 16, 1), y: 580 },
+                        { x: new Date(2012, 17, 1), y: 600 },
+                        { x: new Date(2012, 18, 1), y: 530 },
+                        { x: new Date(2012, 19, 1), y: 640 },
+                        { x: new Date(2012, 20, 1), y: 690 },
+                        { x: new Date(2012, 21, 1), y: 520 },
+                        { x: new Date(2012, 22, 1), y: 450 },
+                        { x: new Date(2012, 23, 1), y: 510 },
+                        { x: new Date(2012, 24, 1), y: 650 },
+                        { x: new Date(2012, 25, 1), y: 540 },
+                        { x: new Date(2012, 26, 1), y: 430 },
+                        { x: new Date(2012, 27, 1), y: 620 },
+                        { x: new Date(2012, 28, 1), y: 555 },
+                        { x: new Date(2012, 29, 1), y: 500 },
+                    ]
+                    }
+                    ]
+                });
+                chart.render();
+            }
+        }
+        </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="team_container">
+            <div class="nav-bar">User Dashboard</div>
+        </div>
+        <div class="row">
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar1.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Charlie S. Gerardi</div>
+                                <br>
+                                <div class="designation">Professor</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer0" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>858</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>301</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$14159.63</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                            <div firstname-initial="R"></div>
+                            <div class="profile-intro">
+                                <div class="person-name">Riley D. Norris</div>
+                                <br>
+                                <div class="designation">Transmission Engineer</div>
+                            </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer1" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>908</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>320</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$16185.07</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar2.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Aaron E. Poynton</div>
+                                <br>
+                                <div class="designation">Public address system announcer</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer2" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>887</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>328</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$15664.71</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Henry A. Gilchrist</div>
+                                <br>
+                                <div class="designation">Professor</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer3" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>858</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>301</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$14159.63</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar4.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Cody I. Tunbridge</div>
+                                <br>
+                                <div class="designation">Product designer</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer4" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>933</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>303</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$15163.91</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar5.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Wm A. Winslow</div>
+                                <br>
+                                <div class="designation">Contract cutter</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer5" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>886</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>281</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$14787.74</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar6.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Charles S. Gardner</div>
+                                <br>
+                                <div class="designation">Phlebotomist</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer6" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>932</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>282</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$14454.62</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Lincoln H. Moss</div>
+                                <br>
+                                <div class="designation">Auto damage appraiser</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer7" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>924</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>306</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$14454.62</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+
+                <!--First User Design Starts Here-->
+                <div class="profile-card">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar8.png" alt="dp">
+                            <div class="profile-intro">
+                                <div class="person-name">Sienna H. Alanson</div>
+                                <br>
+                                <div class="designation">Oral Surgeon</div>
+                            </div>
+                        </div>
+                        <div class="graph-container">
+                            <!-- Put the line graph here -->
+                            <div id="chartContainer8" style="height: 100px; width: auto; opacity: 100%;">
+                            </div>
+                        </div>
+                        <div class="right-pane">
+                            <!--Right Pane Impressions and Conversion figures-->
+                            <table>
+                                <tr><td>923</td></tr>
+                                <tr><th>impressions</th></tr>
+                                <tr><td>315</td></tr>
+                                <tr><th>conversions</th></tr>
+                                <tr><td>$14454.62</td></tr>
+                                <tr><th>revenue</th></tr>
+                            </table>
+                        </div>
+
+                        <div class="footer">
+                            <!--Impressions and Conversions figures-->
+                            <p>
+                                Conversions 4/12 - 4/30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--First User Design Ends Here-->
+        </div>
+    </div>
+</body>
+</html>
